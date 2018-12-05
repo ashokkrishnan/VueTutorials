@@ -5,6 +5,17 @@
     <h3>{{ClassNam}}</h3>
     <h4>{{stud.FirName}}</h4>
     <h5>{{stud.Grade}}</h5>
+
+   <h1>The following are V text Directives </h1>
+   <p v-text="stud.FirName"></p>
+
+   <p v-if="conditionval">if true: {{stud.FirName}}</p>
+   <p v-else="conditionval">Condition val is false</p>
+
+<ul>
+
+<li v-for="mk in marks">{{mk.mark1}}</li>
+</ul>
   </div>
 </template>
 
@@ -24,7 +35,14 @@ export default {
       stud:{
           FirName:'Sam',
           Grade :'A grade'
-      }
+      },
+      conditionval: false,
+      marks:[
+        {mark1:'100'},
+        {mark1:'90'},
+        {mark1:'77'},
+        {mark1:'45'},
+      ]
       }
   }
 }
